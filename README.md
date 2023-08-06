@@ -7,7 +7,7 @@ we allow you to add, delete, update & retrieve all product.
 
 ### Base Path
 
-http://localhost:8080
+https://ecommerce-apis-nijq.onrender.com
 
 #### Get all products
 
