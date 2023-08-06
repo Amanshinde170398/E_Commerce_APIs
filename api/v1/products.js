@@ -1,5 +1,6 @@
 const Product = require("../../model/product");
 
+// FETCH all product from DB
 module.exports.getProducts = async (req, res) => {
   try {
     const products = await Product.find({});
@@ -22,6 +23,7 @@ module.exports.getProducts = async (req, res) => {
   }
 };
 
+// Create a product in DB
 module.exports.create = async (req, res) => {
   try {
     const product = await Product.create(req.body.product);
@@ -38,6 +40,7 @@ module.exports.create = async (req, res) => {
   }
 };
 
+// Update the quantity of product in DB
 module.exports.update = async (req, res) => {
   try {
     const number = req.query.number;
@@ -63,6 +66,7 @@ module.exports.update = async (req, res) => {
   }
 };
 
+// DElETE the product for pass id from DB
 module.exports.delete = async (req, res) => {
   try {
     const product = await Product.findById(req.params.id);
